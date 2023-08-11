@@ -257,7 +257,27 @@
                 <br>
                 <p class="footer__copyright">&copy;All Rights Reserved</p>
 <br>
-                <p style="text-align:center; font-weight:bold; color: white">IP traced: <span id="user-ip"></span></p>
+                <p id="date"></p>
+                <p id="time"></p>
+                <script>
+                    function updateDateTime() {
+    const currentDate = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = currentDate.toLocaleDateString(undefined, options);
+    const formattedTime = currentDate.toLocaleTimeString();
+
+    document.getElementById("date").textContent = formattedDate;
+    document.getElementById("time").textContent = formattedTime;
+}
+
+// Update date and time every second
+setInterval(updateDateTime, 1000);
+
+// Initial update
+updateDateTime();   
+                </script>
+                <br>
+                <p style="text-align:center; color: grey">IP traced: <span id="user-ip"></span></p>
                 <script>
                     async function fetchIPAddress(){
                        try {
