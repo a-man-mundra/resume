@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /aaeca.jpg
+Disallow: /Resume.png
+Disallow: /pf.png
