@@ -233,28 +233,42 @@ body {
                             </li>
                         </ul>
                     </div>
-                    <form action="" class="form">
+                    <form name="submit-to-google-sheet" id="contact-form" class="form">
                         <div class="form__group">
-                            <input type="text" class="form__input" placeholder="Enter your name" required>
+                            <input type="text" name="Name" class="form__input" placeholder="Enter your name" required>
                         </div>
                         <div class="form__group">
-                            <input type="email" class="form__input" placeholder="Enter your email" required>
+                            <input type="email" name="Email" class="form__input" placeholder="Enter your email" required>
                         </div>
                         <div class="form__group">
-                            <textarea required class="form__input form__textarea"
+                            <textarea required name="Message" class="form__input form__textarea"
                                 placeholder="How can I help you?"></textarea>
                         </div>
+                    <span id="msg" style="color: red; text-style:bold; margin: -40px; display: block"></span>
                         <div class="form__group">
-                            <button type="submit" class="btn btn--primary" onclick="show1()">
+                            <button type="submit" id="sb-btn" class="btn btn--primary" onclick="show1()">
                                 <i class="bx bx-send"></i>
                                 Send Message
                             </button>
-                            <script >
-                    function show1(){
-                       alert("Message Sent! Getting in touch soon") ;
-                    }
-                </script>
                         </div>
+                        <div class="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); z-index: 1000;" id="popup-message">
+                                Your message has been sent!
+                            </div>
+                            <script >                                
+                    function show1(){
+            //             const formData = [];
+            //         document.getElementById("sb-btn").addEventListener("click", function () {
+            // if (formData.length === 0) {alert("Please fill form completely!"); return;}
+            // })
+                    document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const popup = document.getElementById("popup-message");
+    popup.style.display = "block";
+    setTimeout(function () {
+        popup.style.display = "none";
+    }, 2000);
+});}
+                </script>
                     </form>
                 </div>
             </div>
@@ -325,7 +339,23 @@ updateDateTime();
                             </div>
         </div>
     </footer>
-
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx9am-SF2EbIzdsBr_dF3RTHQ46-yjKIhTmnd1_DaSJs4IkIi0OebW_ZWX-oeDwyntR/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+          msg.innerHTML=""
+          setTimeout(function(){
+              msg.innerHTML=""
+          },500)
+           form.reset()
+      .catch(error => console.error('Error!', error.message))
+      })
+  })
+</script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
