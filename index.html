@@ -350,9 +350,9 @@ updateDateTime();
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
           msg.innerHTML=""
-          setTimeout(function(){
-              msg.innerHTML=""
-          },500)
+        //  setTimeout(function(){
+             // msg.innerHTML=""
+       //   },500)
            form.reset()
       .catch(error => console.error('Error!', error.message))
       })
