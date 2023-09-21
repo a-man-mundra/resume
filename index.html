@@ -347,13 +347,17 @@ updateDateTime();
                
         
     <script>
-    fetch('https://pglife.unaux.com/counter.php')
+    // Replace with the URL of your PHP file on unaux.com
+    const phpUrl = 'https://pglife.unaux.com/counter.php';
+
+    // Fetch the PHP file
+    fetch('phpurl')
         .then(response => response.text())
         .then(content => {
             document.getElementById('dynamic-content').innerHTML = content;
         });
 </script>
-          <div id="dynamic-content"></div>
+          <div style="text-align: center" id="dynamic-content"></div>
             </div>
         </div>
     </footer>
