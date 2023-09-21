@@ -344,6 +344,16 @@ updateDateTime();
                     }
                    fetchIPAddress(); 
                 </script>
+               
+                <script>
+    fetch('http://pglife.unaux.com/counter.php')
+        .then(response => response.text())
+        .then(content => {
+            document.getElementById('dynamic-content').innerHTML = content;
+        });
+</script>
+        <div id="dynamic-content"></div>
+
                             </div>
         </div>
     </footer>
