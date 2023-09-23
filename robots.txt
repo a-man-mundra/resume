@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /Resume.png
-Disallow: /pf.png
+Disallow: 
