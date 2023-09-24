@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: 
+Disallow: /img/me.webp
+Disallow: /img/Resume.png
+Disallow: /img/pf.webp
