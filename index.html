@@ -284,7 +284,8 @@ setInterval(updateDateTime, 1000);    // Update date and time every second
 updateDateTime();   // Initial update
 </script>
 <!-- <br> -->
-        <p style="text-align:center; color: grey">IP traced: <span id="user-ip"></span></p>
+<p id="location" style="text-align:center; color: grey">Loading...</p>
+        <p style="text-align:center; color: grey">IP: <span id="user-ip"></span></p>
         <script>
             async function fetchIPAddress(){
                try {
@@ -297,13 +298,12 @@ console.error("Error fetching IP address:", error);
 }      }
 fetchIPAddress(); 
         </script>
-<p id="location" style="text-align:center; color: grey">Loading...</p>
     <script>   // Function to fetch location data based on user's IP.
         function fetchLocation() {    // Make an API request to IPinfo.io.
         fetch('https://ipinfo.io?token=e2c456e655f68d')
         .then(response => response.json())
         .then(data => {const locationElement = document.getElementById('location');
-        locationElement.textContent = `Location traced: ${data.city}, ${data.region}, ${data.country}`;    })
+        locationElement.textContent = `Location: ${data.city}, ${data.region}, ${data.country}`;    })
         .catch(error => {       console.error('Error:', error);
                                 const locationElement = document.getElementById('location');
                                 locationElement.textContent = 'Location data unavailable.';  }); }
