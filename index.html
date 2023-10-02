@@ -283,7 +283,7 @@ document.getElementById("time").textContent = formattedTime;    }
 setInterval(updateDateTime, 1000);    // Update date and time every second
 updateDateTime();   // Initial update
 </script>
-<br>
+<!-- <br> -->
         <p style="text-align:center; color: grey">IP traced: <span id="user-ip"></span></p>
         <script>
             async function fetchIPAddress(){
@@ -297,13 +297,13 @@ console.error("Error fetching IP address:", error);
 }      }
 fetchIPAddress(); 
         </script>
-<p id="location">Loading...</p>
+<p id="location" style="text-align:center; color: grey">Loading...</p>
     <script>   // Function to fetch location data based on user's IP.
         function fetchLocation() {    // Make an API request to IPinfo.io.
         fetch('https://ipinfo.io?token=e2c456e655f68d')
         .then(response => response.json())
         .then(data => {const locationElement = document.getElementById('location');
-        locationElement.textContent = `Location: ${data.city}, ${data.region}, ${data.country}`;    })
+        locationElement.textContent = `Location traced: ${data.city}, ${data.region}, ${data.country}`;    })
         .catch(error => {       console.error('Error:', error);
                                 const locationElement = document.getElementById('location');
                                 locationElement.textContent = 'Location data unavailable.';  }); }
@@ -314,7 +314,6 @@ fetchIPAddress();
         <p class="footer__copyright">Made with ❤️ by Aman</p>
         <p class="footer__copyright">2023 &copy; <a href="https://a-man-mundra.github.io/resume" style="color: grey; text-decoration: none"> Aman Mundra</a></p>
 <!--br>     <p>All Rights Reserved</p-->
-<br>
     </div>
 </div>
 </footer>
