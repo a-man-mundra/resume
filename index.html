@@ -59,7 +59,40 @@
     <style>
     body { font-family: Arial, sans-serif;     transition: background-color 0.3s, color 0.3s; }
     .light-mode {     background-color: rgb(19, 59, 235);     color: black; }
-    .dark-mode {     background-color: rgb(82, 12, 129);     color: white; }           
+    .dark-mode {     background-color: rgb(82, 12, 129);     color: white; }    
+        .icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
   </style>
         <script> document.addEventListener("contextmenu", (event) => { event.preventDefault(); }); </script>
         <div class="grid home__wrapper">
@@ -71,7 +104,10 @@
                 
                 <div class="social">
                     <ul class="social__list">
+                        <div class="tooltip">
+            <span class="tooltiptext">Linkedin</span>   <!--             <i class="fa fa-home"></i> -->
                         <li class="social__item"><a href="https://in.linkedin.com/in/amanmundra07" class="social__link"><i class="bx bxl-linkedin"></i></a></li>
+        </div>
 <!--                            <li class="social__item"><a href="https://www.facebook.com/aman.mundra.125" class="social__link"><i class="bx bxl-facebook"></i></a></li> -->
 <!--                                 <li class="social__item"><a href="https://www.instagram.com/_aman_mundra" target="_blank" class="social__link"><i class="bx bxl-instagram"></i></a></li> -->
                     </ul>
@@ -120,7 +156,8 @@
                 <p class="about__description">As a CS student I am learning about computer hardware & software can implement the same. Currently learning Web Devloping & Designing.
                     Looking for Good Job/Internship Opportunity.</p>
 
-                <a href="img/Resume.webp" class="btn btn--primary"><i class="bx bx-download"></i>Resume</a>
+                <a href="img/Resume.webp" class="btn btn--primary">Resume</a>
+<!--                     <i class="bx bx-download"></i> -->
             </div>
         </div>
     </div>
@@ -258,17 +295,24 @@
         <div class="social">
             <ul class="social__list">
                 <li class="social__item">
+                    <div class="tooltip">
+            <span class="tooltiptext">Github</span> <!--             <i class="fa fa-home"></i> -->
                     <a href="https://github.com/a-man-mundra" class="social__link"><i class="bx bxl-github"></i></a>
+        </div>
                 </li>
 <!--                  <li class="social__item"> 
                 <a href="https://www.facebook.com/aman.mundra.125" class="social__link"><i class="bx bxl-facebook"></i></a> </li>
                <li class="social__item"><a href="#" class="social__link"><i class="bx bxl-twitter"></i></a></li>
                  <li class="social__item">
                     <a href="https://www.instagram.com/_aman_mundra" target="_blank" class="social__link"><i class="bx bxl-instagram"></i></a></li> -->
+          <div class="tooltip">
+            <span class="tooltiptext">Linkedin</span>
+            <i class="fa fa-home"></i>
                 <li class="social__item">
                     <a href="https://in.linkedin.com/in/amanmundra07" class="social__link"><i class="bx bxl-linkedin"></i></a>
                 </li>
             </ul>
+        </div>
         </div>
         <p id="date" style="text-align:center; color: grey"></p>
         <p id="time"style="text-align:center; color: grey"></p>
