@@ -37,7 +37,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                         <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
+                        <li class="nav__item"><a href="#contact" class="btn btn--primary"><i class="bx bx-paper-plane"></i>Contact Me</a></li>
                     </ul>
                     <div class="nav__close" id="nav-close">
                         <i class="bx bx-x"></i>
@@ -80,7 +80,8 @@
                     <ul class="social__list">
                         <div class="tooltip">
                         <span class="tooltiptext">Linkedin</span>
-                        <li class="social__item"><a href="https://in.linkedin.com/in/amanmundra07" class="social__link"><i class="bx bxl-linkedin"></i></a></li>
+                            <a href="https://in.linkedin.com/in/amanmundra07" class="social__link">
+                        <li class="social__item"><i class="bx bxl-linkedin"></i></li></a>
                         </div>                            
 <!--                    <li class="social__item"><a href="https://www.facebook.com/aman.mundra.125" class="social__link"><i class="bx bxl-facebook"></i></a></li> -->    <!--                    <li class="social__item"><a href="https://www.instagram.com/_aman_mundra" target="_blank" class="social__link"><i class="bx bxl-instagram"></i></a></li> -->
                     </ul>
@@ -208,7 +209,7 @@
                 <ul class="contact__list">
                     <li class="service__card">
                         <span class="contact__icon"><i class="bx bx-phone"></i></span>
-                        99<span style="color:white">5</span>N/A
+                        <span style="color:white">995 </span>N/A
                     </li>
                     <li class="service__card">
                         <span class="contact__icon"><i class="bx bx-envelope"></i></span>
@@ -264,16 +265,16 @@
             <ul class="social__list">
                 <div class="tooltip">
                 <span class="tooltiptext">Github</span>
-                <li class="social__item">
-                    <a href="https://github.com/a-man-mundra" class="social__link"><i class="bx bxl-github"></i></a>
-                </li>
+                    <a href="https://github.com/a-man-mundra" class="social__link">
+                <li class="social__item"><i class="bx bxl-github"></i>
+                </li> </a>
                 </div>    
 <!--            <li class="social__item"> <a href="https://www.facebook.com/aman.mundra.125" class="social__link"><i class="bx bxl-facebook"></i></a> </li>    <li class="social__item"><a href="#" class="social__link"><i class="bx bxl-twitter"></i></a></li> <li class="social__item">   <a href="https://www.instagram.com/_aman_mundra" target="_blank" class="social__link"><i class="bx bxl-instagram"></i></a></li> -->
                 <div class="tooltip">
                 <span class="tooltiptext">Linkedin</span>
-                <li class="social__item">
-                    <a href="https://in.linkedin.com/in/amanmundra07" class="social__link"><i class="bx bxl-linkedin"></i></a>
-                </li>
+                    <a href="https://in.linkedin.com/in/amanmundra07" class="social__link">
+                <li class="social__item"><i class="bx bxl-linkedin"></i>
+                </li> </a>
                 </div>
             </ul>
         </div>
@@ -310,7 +311,7 @@ fetchIPAddress();
         fetch('https://ipinfo.io?token=e2c456e655f68d')
         .then(response => response.json())
         .then(data => {const locationElement = document.getElementById('location');
-        locationElement.textContent = `Location: ${data.city}, ${data.region}, ${data.country}`;    })
+        locationElement.textContent = `Near to: ${data.city}, ${data.region}, ${data.country}`;    })
         .catch(error => {       console.error('Error:', error);
                                 const locationElement = document.getElementById('location');
                                 locationElement.textContent = 'Location data unavailable.';  }); }
