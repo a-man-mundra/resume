@@ -278,11 +278,10 @@
             </ul>
         </div>
         <p id="date" style="text-align:center; color: grey"></p>
-        <p id="time"style="text-align:center; color: grey"></p>
+        <p id="time"style="text-align:center; color: grey"></p><br>
         <p id="location" style="text-align:center; color: grey">Loading...</p>
-        <p style="text-align:center; color: grey">IP traced: <span id="user-ip"></span></p>
+        <p style="text-align:center; color: grey">IP traced: <span id="user-ip"></span></p><br>
         <p style="color: white; text-align:center" class="footer__copyright">Made with ❤️ by Aman</p>
-        <p class="footer__copyright">2023 &copy; All Rights Reserved</p>
         <p class="footer__copyright" style="color: grey; text-decoration: none; text-align:center">2023 &copy; <a href="https://a-man-mundra.github.io/resume" > Aman Mundra</a></p>
         
             
@@ -317,74 +316,8 @@ fetchIPAddress();
                                 locationElement.textContent = 'Location data unavailable.';  }); }
             // Call the fetchLocation function when the page loads.
             window.onload = fetchLocation;
-</script>
-<style>
-       body {
-               background-color: #71718c;
-               color: #ffffff;
-               /* font-size: 100px; */
-             }
-             h1 {
-               font-size: 30px;
-             }
-             .text-1 {
-               animation: text1;
-             }
-             .text-2 {
-               animation: text2;
-             }
-             .text-1,
-             .text-2 {
-               overflow: hidden;
-               white-space: nowrap;
-               display: inline-block;
-               position: relative;
-               animation-duration: 10s;
-               animation-timing-function: steps(25, end);
-               animation-iteration-count: infinite;
-             }
-             .text-1::after,
-             .text-2::after {
-               content: "|";
-               position: absolute;
-               right: 0;
-               animation: caret infinite;
-               animation-duration: 1s;
-               animation-timing-function: steps(1, end);
-             }
-             @keyframes text2 {
-               0%,
-               50%,
-               100% {
-                 width: 0;
-               }
-               10%,
-               40% {
-                 width: 17em;
-               }
-             }
-             @keyframes text1 {
-               0%,
-               50%,
-               100% {
-                 width: 0;
-               }
-               10%,
-               40% {
-                 width: 17em;
-               }
-             }
-             
-           </style>
-             <span class="text-1">I am a great heading for your static web page</span>
-             <span class="text-2">Really? And this is made without JavaScript?</span>
-            
-       
-    </div>
-</div>
-</footer>
-<script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbx9am-SF2EbIzdsBr_dF3RTHQ46-yjKIhTmnd1_DaSJs4IkIi0OebW_ZWX-oeDwyntR/exec'
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx9am-SF2EbIzdsBr_dF3RTHQ46-yjKIhTmnd1_DaSJs4IkIi0OebW_ZWX-oeDwyntR/exec'        //contact form to sheet
 const form = document.forms['submit-to-google-sheet']
 const msg=document.getElementById("msg")
 form.addEventListener('submit', e => {
@@ -394,8 +327,14 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
   msg.innerHTML=""    //  setTimeout(function(){ msg.innerHTML=""},500)
   form.reset()
 .catch(error => console.error('Error!', error.message))
-})
-})
+})    })    
+    
+</script>
+    </div>
+</div>
+</footer>
+<script>
+
 </script>
 </body>
 </html>
