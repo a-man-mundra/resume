@@ -58,6 +58,8 @@
                     if (hour >= 6 && hour < 18) { document.body.classList.add('light-mode'); 
                     } else { document.body.classList.add('dark-mode'); }
                     document.addEventListener("contextmenu", (event) => { event.preventDefault(); }); 
+                    function disableCopyPaste(event) {event.preventDefault(); }
+                    window.onload = function() {var elements = document.querySelectorAll('input, textarea'); elements.forEach(function(element) {element.addEventListener('copy', disableCopyPaste); element.addEventListener('paste', disableCopyPaste); }); }
     </script>
     <style>
     body { font-family: Arial, sans-serif;     transition: background-color 0.3s, color 0.3s; }
