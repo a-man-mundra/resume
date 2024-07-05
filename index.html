@@ -320,7 +320,7 @@ fetchIPAddress();
         fetch('https://ipinfo.io?token=e2c456e655f68d')
         .then(response => response.json())
         .then(data => {const locationElement = document.getElementById('location');
-        locationElement.textContent = `Near to: ${data.city}, ${data.region}, ${data.country}`;    })
+        locationElement.textContent = Near to: ${data.city}, ${data.region}, ${data.country};    })
         .catch(error => {       console.error('Error:', error);
                                 const locationElement = document.getElementById('location');
                                 locationElement.textContent = 'Location data unavailable.';  }); }
@@ -339,9 +339,9 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 .catch(error => console.error('Error!', error.message))
 })    })    
 
-function disableCopyPaste(element) { element.addEventListener('copy', function(e) { e.preventDefault();});  element.addEventListener('paste', function(e) {e.preventDefault();}); element.addEventListener('cut', function(e) {e.preventDefault();});  }
-        // Apply the disableCopyPaste function to all input fields in the form
-        document.querySelectorAll('#contact-form input[type="text"]', #contact-form input[type="email"], #contact-form textarea').forEach(function(input) { disableCopyPaste(input);        });
+// function disableCopyPaste(element) { element.addEventListener('copy', function(e) { e.preventDefault();});  element.addEventListener('paste', function(e) {e.preventDefault();}); element.addEventListener('cut', function(e) {e.preventDefault();});  }
+//         // Apply the disableCopyPaste function to all input fields in the form
+//         document.querySelectorAll('#contact-form input[type="text"]', #contact-form input[type="email"], #contact-form textarea').forEach(function(input) { disableCopyPaste(input);        });
     
 </script>
     </div>
