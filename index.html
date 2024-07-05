@@ -339,9 +339,9 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 .catch(error => console.error('Error!', error.message))
 })    })    
 
-function disableCopyPaste(element) { element.addEventListener('copy', function(e) { e.preventDefault();});  element.addEventListener('paste', function(e) {e.preventDefault();}); element.addEventListener('cut', function(e) {e.preventDefault();});  }
-        // Apply the disableCopyPaste function to all input fields in the form
-        document.querySelectorAll('#contact-form input[type="text"]', #contact-form input[type="email"], #contact-form textarea').forEach(function(input) { disableCopyPaste(input);        });
+// function disableCopyPaste(element) { element.addEventListener('copy', function(e) { e.preventDefault();});  element.addEventListener('paste', function(e) {e.preventDefault();}); element.addEventListener('cut', function(e) {e.preventDefault();});  }
+//         // Apply the disableCopyPaste function to all input fields in the form
+//         document.querySelectorAll('#contact-form input[type="text"]', #contact-form input[type="email"], #contact-form textarea').forEach(function(input) { disableCopyPaste(input);        });
     
 </script>
     </div>
