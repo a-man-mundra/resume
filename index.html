@@ -60,7 +60,6 @@
                     document.addEventListener("contextmenu", (event) => { event.preventDefault(); }); 
                     function disableCopyPaste(event) {event.preventDefault(); }
                     window.onload = function() {var elements = document.querySelectorAll('input, textarea'); elements.forEach(function(element) {element.addEventListener('copy', disableCopyPaste); element.addEventListener('paste', disableCopyPaste); }); }
-                    document.addEventListener('visibilitychange', function() {if (document.hidden) {document.title = "B.Tech. CSE'24 Graduate";} else {document.title = "Aman Mundra";  }});
     </script>
     <style>
     body { font-family: Arial, sans-serif;     transition: background-color 0.3s, color 0.3s; }
@@ -71,9 +70,6 @@
     .tooltip .tooltiptext { visibility: hidden; width: 86px;  background-color: #333;  color: #fff; text-align: center;  border-radius: 6px;  padding: 5px;  position: absolute;    z-index: 1;    bottom: 125%;    left: 50%;    margin-left: -60px;    opacity: 0;    transition: opacity 0.3s;    }
     .tooltip:hover .tooltiptext {   visibility: visible;    opacity: 1;    }
     .home__image .img:hover{transform: scale(1.4);}
-    .geeks {width: 300px; height: 300px; overflow: hidden; margin: 0 auto;}
-    .geeks img { width: 100%; transition: 0.5s all ease-in-out; }
-    .geeks:hover img {transform: scale(1.5);}
     </style>
     
         <div class="grid home__wrapper">
@@ -338,10 +334,6 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
   form.reset()
 .catch(error => console.error('Error!', error.message))
 })    })    
-
-// function disableCopyPaste(element) { element.addEventListener('copy', function(e) { e.preventDefault();});  element.addEventListener('paste', function(e) {e.preventDefault();}); element.addEventListener('cut', function(e) {e.preventDefault();});  }
-//         // Apply the disableCopyPaste function to all input fields in the form
-//         document.querySelectorAll('#contact-form input[type="text"]', #contact-form input[type="email"], #contact-form textarea').forEach(function(input) { disableCopyPaste(input);        });
     
 </script>
     </div>
