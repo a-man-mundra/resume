@@ -255,7 +255,7 @@
             function show1()
             {               const formData = []; document.getElementById("sb-btn").addEventListener("click", function () { if (formData.length === 0) {alert("Please fill form completely!"); return;}})
             document.getElementById("contact-form").addEventListener("submit", function (e) {
-            e.preventDefault();
+            // e.preventDefault();
             const popup = document.getElementById("popup-message");
             popup.style.display = "block";
             setTimeout(function () {
