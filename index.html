@@ -80,6 +80,17 @@
     .tooltip .tooltiptext { visibility: hidden; width: 78px;  background-color: #333;  color: #fff; text-align: center;  border-radius: 6px;  padding: 5px;  position: absolute;    z-index: 1;    bottom: 125%;    left: 50%;    margin-left: -60px;    opacity: 0;    transition: opacity 0.3s;    }
     .tooltip:hover .tooltiptext {   visibility: visible;    opacity: 1;    }
     /* .home__image .img:hover{transform: scale(1.4);} .geeks {width: 300px; height: 300px; overflow: hidden; margin: 0 auto;} .geeks img { width: 100%; transition: 0.5s all ease-in-out; } .geeks:hover img {transform: scale(1.5);} */
+    .modal {display: none; /* Hidden by default */  position: fixed; /* Stay in place */ z-index: 1; /* Sit on top */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgb(0,0,0); /* Fallback color */ background-color: rgba(0,0,0,0.9); /* Black w/ opacity */ }
+    /* Modal Content (image) */
+    .modal-content { margin: auto; margin-top: 100px; display: block; width: 80%; max-width: 700px; }
+    /* Caption of Modal Image */
+    #caption { margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px; }
+    /* Add Animation */
+    .modal-content, #caption {  animation-name: zoom; animation-duration: 0.4s; }
+    @keyframes zoom { from {transform: scale(0)}  to {transform: scale(1)} }
+    /* The Close Button */
+    .close { position:sticky; top: 105px; margin-right: auto; color: #ef2020; font-size: 40px; font-weight: bold; transition: 0.2s; }
+    .close:hover, .close:focus { color: #eab676; text-decoration: none; cursor:grabbing; }    
     </style>
     
         <div class="grid home__wrapper">
@@ -142,8 +153,27 @@
             <div class="about__body">
                 <h3 class="about__title">Computer Science student of B.Tech. Final Year </h3>
                 <p class="about__description">As a CS student I am learning about computer hardware & software, and can implement the same. Currently learning Web Development, Python, Java.<br> Looking for Good Job/Internship Opportunity.</p>
-                <a href="img/Resume.webp" class="btn btn--primary">Resume</a>
-            </div>
+                <!-- <a href="img/Resume.webp" class="btn btn--primary">Resume</a> -->
+                <a class="show-image-link, btn btn--primary" onclick="showModal('img/Resume.webp', '')">Resume</a>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                    <div id="caption"></div>
+                  </div>
+                </div>
+                  
+                  <script>
+                    function showModal(src, alt) {
+                      var modal = document.getElementById("myModal");
+                      var modalImg = document.getElementById("modalImage");
+                      var captionText = document.getElementById("caption");    
+                      modal.style.display = "block";
+                      modalImg.src = src;
+                      captionText.innerHTML = alt;}
+                    function closeModal() {
+                      var modal = document.getElementById("myModal");
+                      modal.style.display = "none";}
+                  </script>
         </div>
     </div>
 </section>
