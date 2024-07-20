@@ -70,6 +70,18 @@
                     function disableCopyPaste(event) {event.preventDefault(); }
                     window.onload = function() {var elements = document.querySelectorAll('input, textarea'); elements.forEach(function(element) {element.addEventListener('copy', disableCopyPaste); element.addEventListener('paste', disableCopyPaste); }); }
                     document.addEventListener('visibilitychange', function() {if (document.hidden) {document.title = "B.Tech. CSE'24 Graduate";} else {document.title = "Aman Mundra";  }});
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+        document.addEventListener('keydown', event => {
+            if (event.keyCode === 123 || // F12
+                (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+                (event.ctrlKey && event.shiftKey && event.keyCode === 74) || // Ctrl+Shift+J
+                (event.ctrlKey && event.keyCode === 85) // Ctrl+U
+            ) {
+                event.preventDefault();
+            }
+        });
     </script>
     <style>
     body { font-family: Arial, sans-serif;     transition: background-color 0.3s, color 0.3s; }
@@ -79,7 +91,7 @@
     .tooltip {    position: relative;    display: inline-block;    margin: 10px;    }
     .tooltip .tooltiptext { visibility: hidden; width: 78px;  background-color: #333;  color: #fff; text-align: center;  border-radius: 6px;  padding: 5px;  position: absolute;    z-index: 1;    bottom: 125%;    left: 50%;    margin-left: -60px;    opacity: 0;    transition: opacity 0.3s;    }
     .tooltip:hover .tooltiptext {   visibility: visible;    opacity: 1;    }
-    /* .home__image .img:hover{transform: scale(1.4);} .geeks {width: 300px; height: 300px; overflow: hidden; margin: 0 auto;} .geeks img { width: 100%; transition: 0.5s all ease-in-out; } .geeks:hover img {transform: scale(1.5);} */
+    .home__image .img:hover{transform: scale(1.4);} .geeks {width: 300px;  overflow: hidden; margin: 0 auto;} .geeks img { width: 100%; transition: 0.5s all ease-in-out; } .geeks:hover img {transform: scale(1.5);}
     .modal {display: none; /* Hidden by default */  position: fixed; /* Stay in place */ z-index: 1; /* Sit on top */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgb(0,0,0); /* Fallback color */ background-color: rgba(0,0,0,0.9); /* Black w/ opacity */ }
     /* Modal Content (image) */
     .modal-content { margin: auto; margin-top: 100px; display: block; width: 80%; max-width: 700px; }
@@ -231,8 +243,8 @@
             </div>
         <div class="grid portfolio__wrapper">
             
-            <div class="portfolio__card">
-                <img src="img/fyp.webp" alt="Project title" class="portfolio__image">
+            <div class="portfolio__card geeks">
+                <img src="img/fyp.webp" alt="Python Project" class="portfolio__image">
                 <span class="portfolio__category">Face Recognition based Attendance System</span>
                 <h3 class="portfolio__title">Developed Final Year Project using Python.</h3>
                 <a href="https://youtu.be/9X3fkuusUQQ" target="_blank" class="btn btn--primary">
@@ -241,8 +253,8 @@
                 </a>
             </div>
             
-            <div class="portfolio__card">
-                <img src="img/pf.webp" alt="Project title" class="portfolio__image">
+            <div class="portfolio__card geeks">
+                <img src="img/pf.webp" alt="Website Project" class="portfolio__image">
                 <span class="portfolio__category">FrontEnd of Website</span>
                 <h3 class="portfolio__title">Created front-end part of PG Website.</h3>
                 <a href="https://www.pglife.kesug.com" target="_blank" class="btn btn--primary">
@@ -251,8 +263,8 @@
                 </a>
             </div>
             
-            <div class="portfolio__card">
-                <img src="img/aaeca.webp" alt="Project title" class="portfolio__image">
+            <div class="portfolio__card geeks">
+                <img src="img/aaeca.webp" alt="Logo Design" class="portfolio__image">
                 <span class="portfolio__category">Logo Design</span>
                 <h3 class="portfolio__title">Designed Logo for AAECA.</h3>
                 <a href="https://www.ecajmer.ac.in" target="_blank" class="btn btn--primary">
