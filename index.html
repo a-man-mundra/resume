@@ -60,6 +60,9 @@
             </nav>
         </div>
     </header>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
     
     <main class="l-main">
        <section id="home" class="home section">
@@ -104,7 +107,16 @@
     @keyframes zoom { from {transform: scale(0)}  to {transform: scale(1)} }
     /* The Close Button */
     .close { position:sticky; top: 105px; margin-right: auto; color: #ef2020; font-size: 40px; font-weight: bold; transition: 0.2s; }
-    .close:hover, .close:focus { color: #eab676; text-decoration: none; cursor:grabbing; }    
+    .close:hover, .close:focus { color: #eab676; text-decoration: none; cursor:grabbing; }  
+    
+        /* Reset body margin */
+body {    margin: 0;    font-family: Arial, sans-serif;}
+/* Toolbar (Sticky) */
+.toolbar {    position: fixed;    top: 0;    left: 0;    width: 100%;    background: #333;    color: white;    text-align: center;    padding: 10px;    font-size: 20px;    z-index: 10;}
+/* Progress Bar Container */
+.progress-container {position: fixed;    top: 50px;     left: 0;    width: 100%;    height: 5px; background: #ddd;  z-index: 9; }
+.progress-bar { height: 100%;     width: 0%;    background: #4caf50;  transition: width 0.1s;}
+
     </style>
     
         <div class="grid home__wrapper">
@@ -404,6 +416,15 @@
                     );
                     event.preventDefault();
                 });
+    // Function to update the scroll progress
+function updateScrollProgress() {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;  
+    document.getElementById("progress-bar").style.width = scrollPercentage + "%";
+}
+// Listen to scroll event
+window.addEventListener("scroll", updateScrollProgress);
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
