@@ -345,13 +345,13 @@ body {    margin: 0;    font-family: Arial, sans-serif;}
 <div class="centered-div" style="border-radius: 8px; border-color: #0a639f; background-color:cornflowerblue; padding: 5px;">
     <form id="contact-form" method="post" name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbwKVJfLJF9hczL6drWAvWCmmWOhA-yGcWTUpFJ0hk-tZPBgSCo7gb3H7LfO90zTRjfWYA/exec" class="form" autocomplete="off">
         <div class="form__group">
-            <input type="text" name="Name" class="form__input" placeholder="Enter your name" required>
+            <input type="text" name="name" class="form__input" placeholder="Enter your name" required>
         </div>
         <div class="form__group">
-            <input type="email" name="Email" class="form__input" placeholder="Enter your email" required>
+            <input type="email" name="email" class="form__input" placeholder="Enter your email" required>
         </div>
         <div class="form__group">
-            <textarea name="Message" class="form__input form__textarea" placeholder="How can I help you?" required></textarea>
+            <textarea name="message" class="form__input form__textarea" placeholder="How can I help you?" required></textarea>
         </div>
         <span id="msg" style="color: red; font-weight: bold; display: block;"></span>
         <input type="text" name="honeypot" style="display: none;">
