@@ -3,14 +3,9 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5R90V91P7"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-T5R90V91P7');
-    </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-T5R90V91P7'); </script>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WDCXN85M');</script>
-
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="img/new.png" type="image/x-icon" width="50" height="50">
@@ -21,22 +16,21 @@
     <link rel="stylesheet" href="css/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
-
+    
     <meta property="og:title" content="Aman Mundra B.Tech. CSE'24 Graduate">
     <meta property="og:description" content="Aman Mundra is B-Tech. Graduate of Government Engineering College Ajmer, from Beawar(Rajasthan).">
     <meta property="og:image" content="https://a-man-mundra.github.io/resume/img/new.png">
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="expires" content="0">
+    <style>::selection { background-color: #eab676; color: black; } </style>   
+
     <meta name="msvalidate.01" content="436C25EEC5E673D055F7A0A990114F94" />
     <meta name="google-site-verification" content="EyXU3F9yfEb5gvmRdcJ0bOd8ozRlJ1fSNyvTIjipzmI" />
-    <style>::selection { background-color: #eab676; color: black; }</style>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDCXN85M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <!-- Header -->
+    <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDCXN85M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
     <header id="l-header" class="l-header">
         <div class="container">
             <nav class="nav">
@@ -49,171 +43,465 @@
                         <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                         <div class="tooltip">
-                            <li class="nav__item">
+                                <li class="nav__item">
                                 <span class="tooltiptext">Connect</span>
-                                <a href="#connect" class="bx bx-globe"></a>
-                            </li>
-                        </div>
-                    </ul>
-                    <div class="nav__close" id="nav-close"><i class="bx bx-x"></i></div>
+                                <a href="#connect" class="bx bx-globe"></a></li>
+                            </div>  
+                   </ul>
+                    <div class="nav__close" id="nav-close">
+                        <i class="bx bx-x"></i>
+                    </div>
                 </div>
-                <div class="nav__open" id="nav-open"><i class="bx bx-menu-alt-right"></i></div>
+
+                <div class="nav__open" id="nav-open">
+                    <i class="bx bx-menu-alt-right"></i>
+                </div>             
+                
             </nav>
         </div>
     </header>
-
-    <!-- Progress Bar -->
     <div class="progress-container">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
-
-    <!-- Main Content -->
+    
     <main class="l-main">
-        <!-- Home Section -->
-        <section id="home" class="home section">
+       <section id="home" class="home section">
             <div class="container">
-                <!-- Scripts -->
-                <script>
-                    const hour = new Date().getHours();
-                    document.body.classList.add(hour >= 6 && hour < 18 ? 'light-mode' : 'dark-mode');
-                    document.addEventListener("contextmenu", e => e.preventDefault());
-                    const disableCopyPaste = e => e.preventDefault();
-                    window.onload = () => {
-                        document.querySelectorAll('input, textarea').forEach(el => {
-                            el.addEventListener('copy', disableCopyPaste);
-                            el.addEventListener('paste', disableCopyPaste);
-                        });
-                    };
-                    document.addEventListener('visibilitychange', () => {
-                        document.title = document.hidden ? "B.Tech. Graduate" : "Aman Mundra";
-                    });
-                    document.addEventListener('keydown', e => {
-                        if ([123, 73, 74, 85].includes(e.keyCode) || (e.ctrlKey && e.key === 'a')) e.preventDefault();
-                    });
-                </script>
-
-                <style>
-                    body { font-family: Arial, sans-serif; transition: background-color 0.3s, color 0.3s; margin: 0;}
-                    .light-mode { background-color: #e29647; color: white; }
-                    .dark-mode { background-color: #926f2d; color: white; }
-                    .tooltip { position: relative; display: inline-block; margin: 10px; }
-                    .tooltip .tooltiptext { visibility: hidden; width: 78px; background: #333; color: #fff; text-align: center; border-radius: 6px; padding: 5px; position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -60px; opacity: 0; transition: opacity 0.3s; }
-                    .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
-                    .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); }
-                    .modal-content { margin: auto; margin-top: 100px; display: block; width: 80%; max-width: 700px; }
-                    #caption { margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px; }
-                    .close { position:sticky; top: 105px; color: #ef2020; font-size: 40px; font-weight: bold; transition: 0.2s; }
-                    .close:hover, .close:focus { color: #eab676; text-decoration: none; cursor:grabbing; }
-                    .progress-container { position: fixed; top: 80px; left: 0; width: 100%; height: 2px; background: #ddd; z-index: 9; }
-                    .progress-bar { height: 100%; width: 0%; background: #ef0606; transition: width 0.1s; }
-                </style>
-
-                <div class="grid home__wrapper">
-                    <div class="home__body">
-                        <span class="home__subtitle">Hello!</span>
-                        <h1 class="home__title">I'm <span class="home__name" style="color:red">Aman</span> <br>Graduate of B.Tech.</h1>
-                        <p class="home__description" style="color:yellow"><b>in Computer Science and Engineering</b><br><br>
-                        <span class="home__subtitle"><span style="color:white">from</span> <a style="color:#DFFF00; text-decoration: none;" href="https://www.ecajmer.ac.in" target="_blank">Government Engineering College Ajmer</a></span></p>
-
-                        <div class="social">
-                            <ul class="social__list">
-                                <div class="tooltip">
-                                    <span class="tooltiptext">LinkedIn</span>
-                                    <a href="https://in.linkedin.com/in/amanmundra07" target="_blank" class="social__link">
-                                        <li class="social__item"><i class="bx bxl-linkedin"></i></li>
-                                    </a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <img src="img/min.webp" alt="Aman" class="home__image" style="pointer-events: none;">
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title" style="font-size:xx-large;">About Me</h2>
-                    <h3 class="section__description">I'm fond of technology and cars.<br>Reading & writing is my hobby.<br>Like to play Volleyball, Cricket & Badminton.</h3>
-                </div>
-                <div class="grid about__wrapper">
-                    <div class="stats grid">
-                        <div class="stats__card">
-                            <div class="stats__icon"><i class="bx bx-book-open"></i></div>
-                            <div class="stats__body"><span class="stats__number">16+</span><p class="stats__description">Years of Learning</p></div>
-                        </div>
-                        <div class="stats__card">
-                            <div class="stats__icon"><i class="bx bx-task"></i></div>
-                            <div class="stats__body"><span class="stats__number">10+</span><p class="stats__description">Projects Completed</p></div>
-                        </div>
-                        <div class="stats__card">
-                            <div class="stats__icon"><i class="bx bx-calendar"></i></div>
-                            <div class="stats__body"><span class="stats__number">Fresher</span><p class="stats__description">Experience</p></div>
-                        </div>
-                    </div>
-
-                    <div class="about__body">
-                        <h3 class="about__title">Computer Science Graduate </h3>
-                        <p class="about__description">As a CS student I have knowledge & hands-on over plenty of computer hardware & software and can implement the same. Currently my domain is <b>Web Development, Python, Java & Cloud Computing</b>.<br>Also equipped in problem-solving, management & documentation. <br> Looking for Good Job Opportunity to learn & explore more.</p>
-                        <a class="btn btn--primary" onclick="showModal('img/Resume.webp', '')">Resume</a>
-                        <div id="myModal" class="modal">
-                            <span class="close" onclick="closeModal()">&times;</span>
-                            <img class="modal-content" id="modalImage" draggable="false" ondragstart="return false;">
-                            <div id="caption"></div>
-                        </div>
-                        <script>
-                            function showModal(src, alt) {
-                                document.getElementById("myModal").style.display = "block";
-                                document.getElementById("modalImage").src = src;
-                                document.getElementById("caption").innerHTML = alt;
-                            }
-                            function closeModal() {
-                                document.getElementById("myModal").style.display = "none";
-                            }
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">Contact</h2>
-                    <p class="section__description">Submit your details and I’ll get back to you!</p>
-                </div>
-                <form id="submit-form" action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
-                    <div class="form-group">
-                        <input name="name" type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input name="email" type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
     <script>
-        document.getElementById("submit-form").addEventListener("submit", function(e){
-            e.preventDefault();
-            fetch(this.action, {
-                method: "POST",
-                body: new FormData(this)
-            }).then(response => {
-                alert("Message sent successfully!");
-                this.reset();
-            }).catch(error => {
-                alert("Failed to send message.");
-            });
+                    const hour = new Date().getHours();
+                    if (hour >= 6 && hour < 18) { document.body.classList.add('light-mode'); 
+                    } else { document.body.classList.add('dark-mode'); }
+                    document.addEventListener("contextmenu", (event) => { event.preventDefault(); }); 
+                    function disableCopyPaste(event) {event.preventDefault(); }
+                    window.onload = function() {var elements = document.querySelectorAll('input, textarea'); elements.forEach(function(element) {element.addEventListener('copy', disableCopyPaste); element.addEventListener('paste', disableCopyPaste); }); }
+                    document.addEventListener('visibilitychange', function() {if (document.hidden) {document.title = "B.Tech. Graduate";} else {document.title = "Aman Mundra";  }});
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+        document.addEventListener('keydown', event => {
+            if (event.keyCode === 123 || // F12
+                (event.ctrlKey && event.key === 'a') ||
+                (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+                (event.ctrlKey && event.shiftKey && event.keyCode === 74) || // Ctrl+Shift+J
+                (event.ctrlKey && event.keyCode === 85) // Ctrl+U
+            ) {
+                event.preventDefault();
+            }
         });
     </script>
+    <style>
+    body { font-family: Arial, sans-serif;     transition: background-color 0.3s, color 0.3s; }
+    .light-mode {     background-color: #e29647;     color: white; }     <!--#bf9765-->
+    .dark-mode {     background-color: 	#926f2d;     color: white; }      <!--#b89c84-->
+    .icon-container {  display: flex;   align-items: center;    }
+    .tooltip {    position: relative;    display: inline-block;    margin: 10px;    }
+    .tooltip .tooltiptext { visibility: hidden; width: 78px;  background-color: #333;  color: #fff; text-align: center;  border-radius: 6px;  padding: 5px;  position: absolute;    z-index: 1;    bottom: 125%;    left: 50%;    margin-left: -60px;    opacity: 0;    transition: opacity 0.3s;    }
+    .tooltip:hover .tooltiptext {   visibility: visible;    opacity: 1;    }
+    .home__image .img:hover{transform: scale(1.4);} .geeks {width: 300px;  overflow: hidden; margin: 0 auto;} .geeks img { width: 100%; transition: 0.5s all ease-in-out; } .geeks:hover img {transform: scale(1.15);}
+    .modal {display: none; /* Hidden by default */  position: fixed; /* Stay in place */ z-index: 1; /* Sit on top */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgb(0,0,0); /* Fallback color */ background-color: rgba(0,0,0,0.9); /* Black w/ opacity */ }
+    /* Modal Content (image) */
+    .modal-content { margin: auto; margin-top: 100px; display: block; width: 80%; max-width: 700px; }
+    /* Caption of Modal Image */
+    #caption { margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px; }
+    /* Add Animation */
+    .modal-content, #caption {  animation-name: zoom; animation-duration: 0.4s; }
+    @keyframes zoom { from {transform: scale(0)}  to {transform: scale(1)} }
+    /* The Close Button */
+    .close { position:sticky; top: 105px; margin-right: auto; color: #ef2020; font-size: 40px; font-weight: bold; transition: 0.2s; }
+    .close:hover, .close:focus { color: #eab676; text-decoration: none; cursor:grabbing; }  
+    
+        /* Reset body margin */
+body {    margin: 0;    font-family: Arial, sans-serif;}
+/* Toolbar (Sticky) */
+.toolbar {    position: fixed;    top: 0;    left: 0;    width: 100%;    background: #333;    color: white;    text-align: center;    padding: 10px;    font-size: 20px;    z-index: 10;}
+/* Progress Bar Container */
+.progress-container {position: fixed;    top: 80px;     left: 0;    width: 100%;    height: 2px; background: #ddd;  z-index: 9; }
+.progress-bar { height: 100%;     width: 0%;    background: #ef0606;  transition: width 0.1s;}
+
+    </style>
+    
+        <div class="grid home__wrapper">
+            <div class="home__body">
+                <span class="home__subtitle">Hello!</span>
+                <h1 class="home__title">I'm <span class="home__name" style="color:red">Aman</span> <br>Graduate of B.Tech.</h1>
+                <p class="home__description" style="color:yellow"><b>in Computer Science and Engineering</b><br><br>
+                <span class="home__subtitle"><span style="color:white">from</span> <a style="color:	#DFFF00; text-decoration: none;" href="https://www.ecajmer.ac.in" target="_blank">Government Engineering College Ajmer</a></span></p>
+             
+                <div class="social">
+                    <ul class="social__list">
+                        <div class="tooltip">
+                        <span class="tooltiptext">LinkedIn</span>
+                            <a href="https://in.linkedin.com/in/amanmundra07" target="_blank" class="social__link">
+                        <li class="social__item"><i class="bx bxl-linkedin"></i></li></a>
+                        </div>                            
+<!--                    <li class="social__item"><a href="https://www.facebook.com/aman.mundra.125" class="social__link"><i class="bx bxl-facebook"></i></a></li> -->    <!--                    <li class="social__item"><a href="https://www.instagram.com/_aman_mundra" target="_blank" class="social__link"><i class="bx bxl-instagram"></i></a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <img src="img/min.webp" alt="Aman" class="home__image" style="pointer-events: none;"> 
+<!-- <div style="position: relative;"> <img src="img/me.png" style="height: 800px; width:fit-content;" alt="Aman" class="home__image"> <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(1,1,1,0.5); z-index: 1;"></div> </div>  -->
+        </div>
+    </div>
+</section>
+<section id="about" class="about section">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" style="font-size:xx-large;">About Me</h2>
+            <h3 class="section__description">I'm fond of technology and cars.<br>Reading & writing is my hobby.<br>Like to play Volleyball, Cricket & Badminton.</h3>
+        </div>
+        <div class="grid about__wrapper">
+            <div class="stats grid">
+               <div class="stats__card">
+                    <div class="stats__icon">
+                        <i class="bx bx-book-open"></i>
+                    </div>
+                    <div class="stats__body">
+                        <span class="stats__number">16+</span><p class="stats__description">Years of Learning</p>
+                    </div>
+                </div>
+                <div class="stats__card">
+                    <div class="stats__icon">
+                        <i class="bx bx-task"></i>
+                    </div>
+                    <div class="stats__body">
+                        <span class="stats__number">10+</span><p class="stats__description">Projects Completed</p>
+                    </div>
+                </div>
+                 <div class="stats__card">
+                    <div class="stats__icon">
+                        <i class="bx bx-calendar"></i>
+                    </div>
+                    <div class="stats__body">
+                        <span class="stats__number">Fresher</span><p class="stats__description">Experience</p>
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="about__body">
+                <h3 class="about__title">Computer Science Graduate </h3>
+                <p class="about__description">As a CS student I have knowledge & hands-on over plenty of computer hardware & software and can implement the same. Currently my domain is <b>Web Development, Python, Java & Cloud Computing</b>.<br>Also equipped in problem-solving, management & documentation.  <br> Looking for Good Job Opportunity to learn & explore more.</p>
+                <!-- <a href="img/Resume.webp" class="btn btn--primary">Resume</a> -->
+                <a class="show-image-link, btn btn--primary" onclick="showModal('img/Resume.webp', '')">Resume</a>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage" draggable="false" ondragstart="return false;">
+                    <div id="caption"></div>
+                  </div>
+                </div>
+                  
+                  <script>
+                    function showModal(src, alt) {
+                      var modal = document.getElementById("myModal");
+                      var modalImg = document.getElementById("modalImage");
+                      var captionText = document.getElementById("caption");    
+                      modal.style.display = "block";
+                      modalImg.src = src;
+                      captionText.innerHTML = alt;}
+                    function closeModal() {
+                      var modal = document.getElementById("myModal");
+                      modal.style.display = "none";}
+                  </script>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services section">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" style="font-size: x-large;">Hire Me</h2>
+            <p class="section__description"><strong>FreeLancing in Software Development and Content Writing.<br>Teaching upto Matriculate Computer Science, Physics, Chemistry & Maths.</strong></p>
+            <br>
+            <a href="#contact"><h3 class="section__title">Feel free to contact...</h3></a>
+        </div>
+        <div class="grid services__wrapper">
+            
+            <div class="service__card">
+                <span class="service__icon">
+                    <i class="bx bx-code"></i>
+                </span>
+                <h3 class="service__title">Web Development <br> & Designing</h3>
+                <p class="service__description">Creating & Designing webpages using classic Web Techologies.</p>
+            </div>
+             
+            <div class="service__card">
+                <span class="service__icon">
+                    <i class="bx bx-pen"></i>
+                </span>
+                <h3 class="service__title">Content <br>Writing </h3>
+                <p class="service__description">Developing error-free & plagiarism-free content is proficient for me.</p>
+            </div>
+            
+            <div class="service__card">
+                <span class="service__icon">
+                    <i class="bx bx-search"></i>
+                </span>
+                <h3 class="service__title">Search Engine<br>Optimization for Web</h3>
+                <p class="service__description">SEO for web results in popular Search Engines.</p>
+            </div>
+            
+            <div class="service__card">
+                <span class="service__icon">
+                    <i class="bx bx-image"></i>
+                    <i class="bx bx-video"></i>
+                </span>
+                <h3 class="service__title">Media<br> Editing</h3>
+                <p class="service__description">Descent level photo-video editing, and graphic designing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio section">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" style="font-size: xx-large;">Recent Projects</h2>
+            </div>
+        <div class="grid portfolio__wrapper">
+            
+            <div class="portfolio__card geeks">
+                <img src="img/fyp.webp" alt="Python Project" class="portfolio__image" draggable="false" ondragstart="return false;">
+                <span class="portfolio__category">Face Recognition based Attendance System</span>
+                <h3 class="portfolio__title">Developed Final Year Project using Python.</h3>
+                <a href="https://youtu.be/ynNG-1DZBLs" target="_blank" class="btn btn--primary">
+                    <i class="bx bx-folder-open"></i>
+                    See Work
+                </a>
+            </div>
+            
+            <div class="portfolio__card geeks">
+                <img src="img/pf.webp" alt="Website Project" class="portfolio__image" draggable="false" ondragstart="return false;">
+                <span class="portfolio__category">FrontEnd of Website</span>
+                <h3 class="portfolio__title">Created front-end part of PG Website.</h3>
+                <a href="https://www.pglife.kesug.com" target="_blank" class="btn btn--primary">
+                    <i class="bx bx-folder-open"></i>
+                    See Work
+                </a>
+            </div>
+            
+            <div class="portfolio__card geeks">
+                <img src="img/aaeca.webp" alt="Logo Design" class="portfolio__image" draggable="false" ondragstart="return false;" draggable="false" ondragstart="return false;">
+                <span class="portfolio__category">Logo Design</span>
+                <h3 class="portfolio__title">Designed Logo for AAECA.</h3>
+                <a href="https://www.ecajmer.ac.in" target="_blank" class="btn btn--primary">
+                    <i class="bx bx-folder-open"></i>
+                    See Work
+                </a>
+            </div>
+            
+            <div class="portfolio__card">
+                <!-- <img src="img/pf.webp" alt="Project title" class="portfolio__image"> -->
+                <span class="portfolio__category" style="text-decoration:underline">Minor Projects</span>
+                <h3 class="portfolio__title">Other Projects available on my GitHub.</h3>
+                <a href="https://github.com/a-man-mundra" target="_blank" class="btn btn--primary">
+                    <i class="bx bx-folder-open"></i>
+                    See Work
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact section" >
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" style="font-size: xx-large;">Contact Me</h2>
+        </div>
+        <div class="grid contact__wrapper">
+            <div class="contact__body">
+                <ul class="contact__list">
+                    <li class="service__card" style="cursor:no-drop">
+                        <span class="contact__icon"><i class="bx bx-phone"></i></span>
+                        <span style="color:white">+91 </span>N/A
+                    </li>
+                    <li class="service__card" style="cursor: help;">
+                        <span class="contact__icon" ><i class="bx bx-envelope"></i></span>
+                        <a href="mailto: mundra248@outlook.com" style="color:white">mundra248@outlook.com</a>
+                    </li>
+                    <li class="service__card" style="cursor: help;">
+                        <span class="contact__icon"><i class="bx bx-map"></i></span>
+                        <a href="https://maps.app.goo.gl/1K7oM1QZYVB8zNRy7" style="color:white">Beawar, Ajmer(RAJ.)-INDIA </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<style>
+    .centered-div {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80vh; /* Full viewport height for demonstration purposes */
+    border: 1px solid #ccc; /* Optional: border for visual demonstration */
+    box-shadow:5px 5px 5px 5px black;
+}
+.centered-div input, textarea, button{
+    box-shadow:2px 2px 2px 2px powderblue;
+}
+.centered-div p {
+    margin: 0 0px; /* Optional: margin between items */
+}
+
+</style>
+<p class="section__description" style="text-align:center"><b>Drop a message I'll reach you</b></p>
+<div class="centered-div" style="border-radius: 8px; border-color: #0a639f; background-color:cornflowerblue; padding: 5px;">
+    <form id="contact-form" method="post" name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbyIQxhISMNoz7iwRh-JzUoSMQft3zb05yaephB3Q6XOnJxxYe-RbmqyA6QCeXspVtY/exec" class="form" autocomplete="off">
+        <div class="form__group">
+            <input type="text" name="Name" class="form__input" placeholder="Enter your name" required>
+        </div>
+        <div class="form__group">
+            <input type="email" name="Email" class="form__input" placeholder="Enter your email" required>
+        </div>
+        <div class="form__group">
+            <textarea name="Message" class="form__input form__textarea" placeholder="How can I help you?" required></textarea>
+        </div>
+        <span id="msg" style="color: red; font-weight: bold; display: block;"></span>
+        <input type="text" name="honeypot" style="display: none;">
+        <div class="form__group">
+            <input type="submit" value="Send Message" class="btn btn--primary" style="border-color: #0a639f;">
+        </div>
+        <div class="popup" style="display: none; color: black; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); z-index: 1000;" id="popup-message">
+            Message Sent!
+        </div>
+    </form>
+</div>
+</div>            
+</section>    
+
+<footer class="l-footer" style="height:min-content;">
+    <div class="container">
+        <div class="footer__wrapper">
+            <h4 id="connect">Connect On:</h4>
+            <div class="social">
+                <ul class="social__list">
+                    <div class="tooltip">
+                        <span class="tooltiptext" style="width: 68px;">GitHub</span>
+                        <a href="https://github.com/a-man-mundra" target="_blank" class="social__link">
+                            <li class="social__item"><i class="bx bxl-github"></i></li>
+                        </a>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptext">LinkedIn</span>
+                        <a href="https://in.linkedin.com/in/amanmundra07" target="_blank" class="social__link">
+                            <li class="social__item"><i class="bx bxl-linkedin"></i></li>
+                        </a>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptext" style="width: 72px;">YouTube</span>
+                        <a href="https://www.youtube.com/@amanmundra_og" target="_blank" class="social__link">
+                            <li class="social__item"><i class="bx bxl-youtube"></i></li>
+                        </a>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptext" style="width: 72px;">Blogger</span>
+                        <a href="https://bytesncoins.blogspot.com" target="_blank" class="social__link">
+                            <li class="social__item"><i class="bx bxl-blogger"></i></li>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+            <p id="date" style="text-align:center; color: rgb(228, 216, 216)"></p>
+            <p id="time" style="text-align:center; color: rgb(228, 216, 216)"></p>
+            <p id="location" style="text-align:center; color: rgb(228, 216, 216);"></p>
+            <p style="text-align:center; color: rgb(228, 216, 216);"><span id="user-ip"></span></p>
+            <br>
+            <p style="color: white; text-align:center" class="footer__copyright">Made with ☕ by Aman</p>
+            <p class="footer__copyright" style="color: rgb(208, 188, 188); text-decoration: none; text-align:center">Since 2023 &copy; <a title="AMAN MUNDRA" href="https://a-man-mundra.github.io/resume">Aman Mundra</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener("copy",(event)=>{
+                    const selectedData =window.getSelection().toString();
+                    event.clipboardData.setData(
+                        "text/plain",
+                        "Hello World!"
+                    );
+                    event.preventDefault();
+                });
+    // Function to update the scroll progress
+function updateScrollProgress() {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;  
+    document.getElementById("progress-bar").style.width = scrollPercentage + "%";
+}
+// Listen to scroll event
+window.addEventListener("scroll", updateScrollProgress);
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to update date and time
+        function updateDateTime() {
+            const currentDate = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = currentDate.toLocaleDateString(undefined, options);
+            const formattedTime = currentDate.toLocaleTimeString();
+            document.getElementById("date").textContent = formattedDate;
+            document.getElementById("time").textContent = formattedTime;
+        }
+        setInterval(updateDateTime, 1000); // Update date and time every second
+        updateDateTime(); // Initial update
+
+        // Function to fetch IP address
+        async function fetchIPAddress() {
+            try {
+                const response = await fetch("https://api64.ipify.org?format=json");
+                const data = await response.json();
+                const userIp = data.ip;
+                document.getElementById("user-ip").textContent ="IP: "+ userIp;
+            } catch (error) {
+                console.error("Error fetching IP address:", error);
+            }
+        }
+        fetchIPAddress();
+
+        // Function to fetch location
+        function fetchLocation() {
+            fetch('https://ipinfo.io?token=e2c456e655f68d')
+                .then(response => response.json())
+                .then(data => {
+                    const locationElement = document.getElementById('location');
+                    locationElement.textContent = `Near: ${data.city}, ${data.region}, ${data.country}`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const locationElement = document.getElementById('location');
+                    locationElement.textContent = 'Location data unavailable.';
+                });
+        }
+        fetchLocation();
+    });
+
+    // Handle form submission
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Fetch form data
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Send the form data to Google Sheets
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show the popup message
+                const popup = document.getElementById("popup-message");
+                popup.style.display = "block";
+                setTimeout(function() {
+                    popup.style.display = "none";
+                    form.reset(); // Reset the form after successful submission
+                }, 2000);
+            } else {
+                console.error('Error submitting form');
+            }
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+</script>
+<script src="Google Sheet.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
