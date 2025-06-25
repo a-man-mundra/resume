@@ -117,7 +117,9 @@ body {    margin: 0;    font-family: Arial, sans-serif;}
 /* Progress Bar Container */
 .progress-container {position: fixed;    top: 80px;     left: 0;    width: 100%;    height: 2px; background: #ddd;  z-index: 9; }
 .progress-bar { height: 100%;     width: 0%;    background: #ef0606;  transition: width 0.1s;}
-
+scroll-behavior: smooth;
+.nav__link.active { color: #ffcc00;  font-weight: bold; border-bottom: 2px solid #ffcc00; }
+        
     </style>
     
         <div class="grid home__wrapper">
@@ -188,7 +190,30 @@ body {    margin: 0;    font-family: Arial, sans-serif;}
                     <div id="caption"></div>
                   </div>
                 </div>
-                  
+
+            <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav__link");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const id = entry.target.getAttribute("id");
+            const link = document.querySelector(`.nav__link[href="#${id}"]`);
+
+            if (entry.isIntersecting) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                if (link) link.classList.add("active");
+            }
+        });
+    }, {
+        threshold: 0.6 // triggers when 60% of the section is in view
+    });
+
+    sections.forEach(section => observer.observe(section));
+});
+</script>
+
                   <script>
                     function showModal(src, alt) {
                       var modal = document.getElementById("myModal");
