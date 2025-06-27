@@ -89,7 +89,7 @@
        <section id="home" class="home section">
             <div class="container">
     <script>
-                  //  const hour = new Date().getHours(); if (hour >= 6 && hour < 18) { document.body.classList.add('light-mode'); } else { document.body.classList.add('dark-mode'); }
+                   const hour = new Date().getHours(); if (hour >= 6 && hour < 18) { document.body.classList.add('light-mode'); } else { document.body.classList.add('dark-mode'); }
                     document.addEventListener("contextmenu", (event) => { event.preventDefault(); }); 
                     function disableCopyPaste(event) {event.preventDefault(); }
                     window.onload = function() {var elements = document.querySelectorAll('input, textarea'); elements.forEach(function(element) {element.addEventListener('copy', disableCopyPaste); element.addEventListener('paste', disableCopyPaste); }); }
@@ -110,8 +110,8 @@
     </script>
     <style>
     body { font-family: Arial, sans-serif;     transition: background-color 0.3s, color 0.3s; }
-/*     .light-mode {     background-color: #e29647;     color: white; }     <!--#bf9765--> */
-/*     .dark-mode {     background-color: 	#926f2d;     color: white; }      <!--#b89c84--> */
+    .light-mode {     background-color: #e29647;     color: white; }     
+    .dark-mode {     background-color: #e29647;     color: white; }      
     .icon-container {  display: flex;   align-items: center;    }
     .tooltip {    position: relative;    display: inline-block;    margin: 10px;    }
     .tooltip .tooltiptext { visibility: hidden; width: 78px;  background-color: #333;  color: #fff; text-align: center;  border-radius: 6px;  padding: 5px;  position: absolute;    z-index: 1;    bottom: 125%;    left: 50%;    margin-left: -60px;    opacity: 0;    transition: opacity 0.3s;    }
